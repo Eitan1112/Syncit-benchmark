@@ -1,0 +1,23 @@
+[21:11:50] {benchmark.py:68} INFO - Starting
+[21:11:50] {benchmark.py:77} INFO - Started all threads.
+[21:12:07] {benchmark.py:86} INFO - Finished. Time: 0:00:17.381514
+[21:12:07] {benchmark.py:68} INFO - Starting
+[21:12:08] {benchmark.py:77} INFO - Started all threads.
+[21:12:27] {benchmark.py:86} INFO - Finished. Time: 0:00:19.359228
+[21:12:27] {benchmark.py:68} INFO - Starting
+[21:12:27] {benchmark.py:77} INFO - Started all threads.
+[21:12:37] {benchmark.py:68} INFO - Starting
+[21:12:38] {benchmark.py:77} INFO - Started all threads.
+[21:13:02] {benchmark.py:86} INFO - Finished. Time: 0:00:24.204232
+[21:13:10] {benchmark.py:68} INFO - Starting
+[21:13:10] {benchmark.py:77} INFO - Started all threads.
+[21:13:30] {benchmark.py:86} INFO - Finished. Time: 0:00:20.057173
+[21:13:38] {benchmark.py:68} INFO - Starting
+[21:13:38] {benchmark.py:77} INFO - Started all threads.
+[21:13:57] {benchmark.py:86} INFO - Finished. Time: 0:00:19.207313
+[21:14:05] {benchmark.py:68} INFO - Starting
+[21:14:05] {benchmark.py:77} INFO - Started all threads.
+[21:14:24] {benchmark.py:86} INFO - Finished. Time: 0:00:19.105938
+[21:14:32] {benchmark.py:68} INFO - Starting
+[21:14:32] {benchmark.py:77} INFO - Started all threads.
+[21:14:51] {benchmark.py:86} INFO - Finished. Time: 0:00:18.504139
