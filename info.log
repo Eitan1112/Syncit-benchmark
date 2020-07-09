@@ -21,3 +21,39 @@
 [21:14:32] {benchmark.py:68} INFO - Starting
 [21:14:32] {benchmark.py:77} INFO - Started all threads.
 [21:14:51] {benchmark.py:86} INFO - Finished. Time: 0:00:18.504139
+[21:32:32] {benchmark.py:68} INFO - Starting
+[21:32:32] {benchmark.py:77} INFO - Started all threads.
+[21:32:44] {benchmark.py:86} INFO - Finished. Time: 0:00:12.562334
+[21:32:52] {benchmark.py:68} INFO - Starting
+[21:32:52] {benchmark.py:77} INFO - Started all threads.
+[21:33:05] {benchmark.py:86} INFO - Finished. Time: 0:00:12.190832
+[21:33:13] {benchmark.py:68} INFO - Starting
+[21:33:13] {benchmark.py:77} INFO - Started all threads.
+[21:33:25] {benchmark.py:86} INFO - Finished. Time: 0:00:11.891390
+[21:33:33] {benchmark.py:68} INFO - Starting
+[21:33:33] {benchmark.py:77} INFO - Started all threads.
+[21:33:45] {benchmark.py:86} INFO - Finished. Time: 0:00:12.202550
+[21:33:53] {benchmark.py:68} INFO - Starting
+[21:33:53] {benchmark.py:77} INFO - Started all threads.
+[21:34:05] {benchmark.py:86} INFO - Finished. Time: 0:00:12.390975
+[21:34:13] {benchmark.py:89} INFO - Finished All checks. Total Requests: 9. Duration: 45. Avergae: 0:00:12.247616
+[10:00:41] {benchmark.py:72} INFO - Starting
+[10:00:41] {benchmark.py:81} INFO - Started all threads.
+[10:01:00] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[10:01:08] {benchmark.py:72} INFO - Starting
+[10:01:08] {benchmark.py:81} INFO - Started all threads.
+[10:01:28] {benchmark.py:90} INFO - Finished. Time: 0:00:20.156359
+[10:01:36] {benchmark.py:72} INFO - Starting
+[10:01:36] {benchmark.py:81} INFO - Started all threads.
+[10:01:49] {benchmark.py:90} INFO - Finished. Time: 0:00:12.556900
+[10:01:57] {benchmark.py:72} INFO - Starting
+[10:01:57] {benchmark.py:81} INFO - Started all threads.
+[10:02:09] {benchmark.py:90} INFO - Finished. Time: 0:00:12.549611
+[10:02:17] {benchmark.py:72} INFO - Starting
+[10:02:17] {benchmark.py:81} INFO - Started all threads.
+[10:02:30] {benchmark.py:90} INFO - Finished. Time: 0:00:12.562105
+[10:02:38] {benchmark.py:72} INFO - Starting
+[10:02:38] {benchmark.py:81} INFO - Started all threads.
+[10:02:50] {benchmark.py:90} INFO - Finished. Time: 0:00:12.507136
+[10:02:58] {benchmark.py:93} INFO - Finished All checks. Total Requests: 9. Duration: 45. Avergae: 0:00:14.066422
+[10:02:58] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO - 127.0.0.1 - - [09/Jul/2020 10:02:58] "[37mGET / HTTP/1.1[0m" 200 -

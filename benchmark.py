@@ -6,12 +6,13 @@ import base64
 import logging
 import tempfile
 import json
+from flask import Flask
 import time
 
 
 # Parameters
-TOTAL_REQUESTS = 65
-DURATION = 5
+TOTAL_REQUESTS = 9
+DURATION = 45
 CHECKS = 5
 SLEEP_BETWEEN_CHECKS = 8
 
@@ -36,6 +37,8 @@ formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
 console.setFormatter(formatter)
 logging.getLogger('').addHandler(console)
 logger = logging.getLogger(__name__)
+
+app = Flask(__name__)
 
 
 def single_request(idx):
@@ -62,6 +65,7 @@ def single_request(idx):
     logger.debug(f'Recieved response {idx}. Response Code: {res.status_code}. Response Text: {res.text}')
     return res.text
 
+@app.route('/')
 def main():
     times = None
     for _ in range(CHECKS):
@@ -87,5 +91,7 @@ def main():
         time.sleep(SLEEP_BETWEEN_CHECKS)
 
     logger.info(f'Finished All checks. Total Requests: {TOTAL_REQUESTS}. Duration: {DURATION}. Avergae: {times / CHECKS}')
-if __name__ == "__main__":
-    main()
+    return f'Finished All checks. Total Requests: {TOTAL_REQUESTS}. Duration: {DURATION}. Avergae: {times / CHECKS}'
+    
+if(__name__ == '__main__'):
+    app.run('0.0.0.0')
