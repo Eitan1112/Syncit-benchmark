@@ -25,7 +25,7 @@ SLEEP_BETWEEN_CHECKS = 8
 AUDIO_FILE = 'audio.wav'
 LANGUAGE = 'en-US'
 HOT_WORDS = json.dumps(['to'])
-URL = os.getenv('SEVRER_URL')
+URL = 'https://syncit-speech-to-text-dev-ycu3nfdh3q-uc.a.run.app'
 START = 60
 
 # set up logging
