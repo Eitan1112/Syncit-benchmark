@@ -1,3 +1,2 @@
-speech_recognition
-threading
+speechrecognition
 requests
