@@ -1,3 +1,4 @@
 speechrecognition
 requests
 flask
+uwsgi
