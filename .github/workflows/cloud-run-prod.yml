@@ -51,4 +51,5 @@ jobs:
             --allow-unauthenticated \
             --timeout 15m \
             --concurrency 1 \
-            --max-instances 30
+            --max-instances 30 \
+            --set-env-vars="SERVER_URL=https://syncit-speech-to-text-dev-ycu3nfdh3q-uc.a.run.app

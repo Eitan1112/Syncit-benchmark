@@ -8,6 +8,10 @@ import tempfile
 import json
 from flask import Flask
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 # Parameters
@@ -21,7 +25,7 @@ SLEEP_BETWEEN_CHECKS = 8
 AUDIO_FILE = 'audio.wav'
 LANGUAGE = 'en-US'
 HOT_WORDS = json.dumps(['to'])
-URL = 'http://192.168.182.136:3000/convert'
+URL = os.getenv('SEVRER_URL')
 START = 60
 
 # set up logging

@@ -2,3 +2,4 @@ speechrecognition
 requests
 flask
 uwsgi
+python-dotenv
