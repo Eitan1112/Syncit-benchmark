@@ -1,2 +1,3 @@
 speechrecognition
 requests
+flask
