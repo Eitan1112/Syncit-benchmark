@@ -6,7 +6,7 @@ import base64
 import logging
 import tempfile
 import json
-from flask import Flask
+from flask import Flask,request
 import time
 import os
 from dotenv import load_dotenv
@@ -15,10 +15,8 @@ load_dotenv()
 
 
 # Parameters
-TOTAL_REQUESTS = 9
-DURATION = 45
-CHECKS = 5
-SLEEP_BETWEEN_CHECKS = 8
+CHECKS = 10
+SLEEP_BETWEEN_CHECKS = 15
 
 
 # Constants
@@ -45,7 +43,7 @@ logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
 
-def single_request(idx):
+def single_request(idx, duration):
     """
     Send a request to get the transcript.
     """    
@@ -54,7 +52,7 @@ def single_request(idx):
     audio_file = sr.AudioFile(AUDIO_FILE)
 
     with audio_file as source:
-        audio = recognizer.record(source, duration=DURATION, offset=START)
+        audio = recognizer.record(source, duration=duration, offset=START)
 
     data = {
         'language': LANGUAGE,
@@ -69,16 +67,18 @@ def single_request(idx):
     logger.debug(f'Recieved response {idx}. Response Code: {res.status_code}. Response Text: {res.text}')
     return res.text
 
-@app.route('/')
+@app.route('/', methods=['POST'])
 def main():
+    total_requests = int(request.form['total_requests'])
+    duration = float(request.form['duration'])
     times = None
     for _ in range(CHECKS):
         logger.info(f'Starting')
         threads = []
 
         t0 = datetime.now()
-        for idx in range(TOTAL_REQUESTS):
-            thread = threading.Thread(target=single_request, args=(idx,))
+        for idx in range(total_requests):
+            thread = threading.Thread(target=single_request, args=(idx,duration))
             thread.start()
             threads.append(thread)
 
@@ -94,8 +94,8 @@ def main():
         logger.info(f'Finished. Time: {(t1-t0).__str__()}')
         time.sleep(SLEEP_BETWEEN_CHECKS)
 
-    logger.info(f'Finished All checks. Total Requests: {TOTAL_REQUESTS}. Duration: {DURATION}. Avergae: {times / CHECKS}')
-    return f'Finished All checks. Total Requests: {TOTAL_REQUESTS}. Duration: {DURATION}. Avergae: {times / CHECKS}'
+    logger.info(f'Finished All checks. Total Requests: {total_requests}. Duration: {duration}. Avergae: {times / CHECKS}')
+    return f'Finished All checks. Total Requests: {total_requests}. Duration: {duration}. Avergae: {times / CHECKS}'
     
 if(__name__ == '__main__'):
-    app.run('0.0.0.0')
+    app.run('0.0.0.0', debug=True)

@@ -57,3 +57,34 @@
 [10:02:50] {benchmark.py:90} INFO - Finished. Time: 0:00:12.507136
 [10:02:58] {benchmark.py:93} INFO - Finished All checks. Total Requests: 9. Duration: 45. Avergae: 0:00:14.066422
 [10:02:58] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO - 127.0.0.1 - - [09/Jul/2020 10:02:58] "[37mGET / HTTP/1.1[0m" 200 -
+[09:30:15] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[09:32:00] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py:1890} ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "benchmark.py", line 72, in main
+    total_requests = request['total_requests']
+  File "C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\local.py", line 377, in <lambda>
+    __getitem__ = lambda x, i: x._get_current_object()[i]
+TypeError: 'Request' object is not subscriptable
+[09:32:00] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO - 127.0.0.1 - - [11/Jul/2020 09:32:00] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[09:32:38] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Restarting with stat
+[09:32:39] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} WARNING -  * Debugger is active!
+[09:32:39] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Debugger PIN: 314-446-569
+[09:32:40] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+[09:32:42] {C:\Users\Eitan\Documents\GitHub\syncit-benchmark\benchmark.py:76} INFO - Starting
+[09:32:42] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO - 127.0.0.1 - - [11/Jul/2020 09:32:42] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+[09:32:54] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Detected change in 'C:\\Users\\Eitan\\Documents\\GitHub\\syncit-benchmark\\benchmark.py', reloading
+[09:32:54] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Restarting with stat
+[09:32:55] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} WARNING -  * Debugger is active!
+[09:32:55] {C:\Users\Eitan\AppData\Local\Programs\Python\Python38-32\lib\site-packages\werkzeug\_internal.py:113} INFO -  * Debugger PIN: 314-446-569
